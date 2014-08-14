@@ -74,7 +74,7 @@ $(document).ready(function(){
 	$(document).cbslider({
 		speed: 2,
 		bgcolor: 'lightblue',
-		aniamtion: 'slide'
+		animation: 'slide'
 	});
 
 });
