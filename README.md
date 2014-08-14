@@ -1,7 +1,7 @@
-cbSlider | <h3>jQuery Responsive SlideShow Plugin</h3>
+cbSlider 
 ========
+<h5>jQuery Responsive Looping SlideShow Plugin</h5>
 
-is a fully-responsive, customizable, looping slideshow
 
 Requires <strong>jQuery</strong> and <strong>TweenMax</strong>
 
