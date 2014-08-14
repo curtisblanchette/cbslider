@@ -1,4 +1,4 @@
-cbslider
+cbSlider | jQuery Responsive SlideShow Plugin
 ========
 
 is a fully-responsive, customizable, looping slideshow
