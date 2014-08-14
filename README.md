@@ -36,7 +36,7 @@ Basic HTML Markup (minimum of 3 slides)
                     <img src="http://lorempixel.com/400/400/abstract">
                 </feature>
                 <article>
-                    <h4>Title</h4>
+                    <h2>Title</h2>
                     <p>Some text</p>
                 </article>
             </li>
@@ -45,7 +45,7 @@ Basic HTML Markup (minimum of 3 slides)
                     <img src="http://lorempixel.com/400/400/abstract">
                 </feature>
                 <article>
-                    <h4>Title</h4>
+                    <h2>Title</h2>
                     <p>Some text</p>
                 </article>
             </li>
@@ -54,7 +54,7 @@ Basic HTML Markup (minimum of 3 slides)
                     <img src="http://lorempixel.com/400/400/abstract">
                 </feature>
                 <article>
-                    <h4>Title</h4>
+                    <h2>Title</h2>
                     <p>Some text</p>
                 </article>
             </li>
