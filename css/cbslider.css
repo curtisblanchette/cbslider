@@ -16,8 +16,6 @@
   margin: 0;
   min-width: 300%;
   position: relative;
-  height: 100%;
-  float: left;
 }
 #slideWrapper #slideshow ol li {
   margin: 0;
@@ -27,23 +25,15 @@
   display: flex;
 }
 #slideWrapper #slideshow ol li feature {
-  height: 100%;
   width: 50%;
   text-align: center;
 }
 #slideWrapper #slideshow ol li feature img {
   width: 50%;
   margin: 0 auto;
-  margin-top: 20px;
-  transition: .5s;
 }
 #slideWrapper #slideshow ol li article {
   width: 50%;
-}
-#slideWrapper #slideshow ol li article h4,
-#slideWrapper #slideshow ol li article p {
-  margin-left: 20px;
-  transition: .5s;
 }
 #slideWrapper #prevSlide,
 #slideWrapper #nextSlide {
