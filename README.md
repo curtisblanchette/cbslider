@@ -38,3 +38,78 @@ Basic HTML Markup
 	<a id="prevSlide">Prev</a>
 </div>
 ```
+Basic CSS
+
+```css
+	#slideWrapper {
+	position:relative;
+	margin:0 auto;
+	max-width:1440px;
+	
+
+	#slideshow {
+		margin:0;
+		min-width:100%;
+		max-height:400px;
+
+		
+		position:relative;
+		z-index:99999;
+		overflow:hidden;
+
+		ol {
+			margin:0;
+			min-width:300%;
+			height:100%;
+			position:relative;
+
+			li {
+				margin:0;
+				float:left;
+				width:33%;
+				max-height:400px;
+				display:flex;
+
+				feature {
+					height:100%;
+					width:50%;
+					text-align:center;
+
+					img {
+						width: 50%;
+						margin:0 auto;
+						margin-top:20px;
+						transition:.5s;
+					}
+				}
+				article {
+					width:50%;
+
+					h4, p {
+						margin-left:20px;
+						transition:.5s;
+					}
+
+				}
+			}
+		}
+	}
+	#prevSlide, #nextSlide	{
+		position:absolute;
+		top:50%;
+		transform:translatey(-50%);
+		z-index:99999;
+		margin:0;
+		border:1px solid #666;
+		color:#666;
+	}
+	#prevSlide:hover , #nextSlide:hover	{
+		background:#666;
+		color:white;
+	}
+	#prevSlide { left:0; }
+	#nextSlide { right:0; }
+	
+}
+
+```
