@@ -38,9 +38,9 @@ Basic HTML Markup
 	<a id="prevSlide">Prev</a>
 </div>
 ```
-Basic CSS
+Less
 
-```css
+```less 
 	#slideWrapper {
 	position:relative;
 	margin:0 auto;
@@ -97,16 +97,12 @@ Basic CSS
 	#prevSlide, #nextSlide	{
 		position:absolute;
 		top:50%;
-		transform:translatey(-50%);
+		transform:translateY(-50%);
 		z-index:99999;
 		margin:0;
-		border:1px solid #666;
 		color:#666;
 	}
-	#prevSlide:hover , #nextSlide:hover	{
-		background:#666;
-		color:white;
-	}
+
 	#prevSlide { left:0; }
 	#nextSlide { right:0; }
 	
