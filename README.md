@@ -9,9 +9,9 @@ Requires jQuery and TweenMax
 <script src="jquery-1.11.1.js"></script>
 <!--CDN link for the latest TweenMax-->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"/></script>
-
+<!-- link to cbslider css -->
 <link href="css/cbslider.css" rel="stylesheet">
-<!-- Require cbslider.js -->
+<!-- Include cbslider.js -->
 <script src="cbslider.js"></script>
 ```
 
