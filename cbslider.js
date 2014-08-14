@@ -1,7 +1,7 @@
 (function($){
 	$.fn.cbslider = function(options) {
 
-		//establish our default settings
+		//establish default settings
 		var settings = $.extend({
 			speed		: 1, //
 			bgcolor     : '',
