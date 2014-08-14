@@ -25,7 +25,7 @@ Basic HTML Markup
 			</li>
 			<li>
 				<feature>
-					<img src="images/utlgo-tshirt.png">
+					<img src="images/featureimage2.png">
 				</feature>
 				<article>
 					<h4>Title</h4>
