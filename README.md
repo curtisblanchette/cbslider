@@ -3,7 +3,7 @@ cbslider
 
 Fully-Responsive, Looping Slider
 
-Requires jQuery and TweenMax
+Requires <strong>jQuery</strong> and <strong>TweenMax</strong>
 
 ```html
 <script src="jquery-1.11.1.js"></script>
