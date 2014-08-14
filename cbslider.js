@@ -3,7 +3,7 @@
 
 		//establish our default settings
 		var settings = $.extend({
-			speed		: 2, //
+			speed		: 1, //
 			bgcolor     : '',
 			animation   : 'slide'  
 		}, options);
@@ -12,8 +12,8 @@
 			$slideshow 	  = $('#slideshow'),
 			$slideol 	  = $('#slideshow ol'),
 			$slideli 	  = $('#slideshow ol li'),
-			slidelength   = $slideshow.find('ol > li').length,
-			interval 	  = $slideshow.data('interval');
+			slidelength   = $slideshow.find('ol > li').length;
+
 
 			$slideWrapper.css({background: settings.bgcolor});
 
@@ -27,7 +27,7 @@
 			///////////////////////////////////////
 			var newW = $slideWrapper.width();
 
-			$(window).on('resize', function(e){
+			$(window).on('resize', function(){
 				//store the new window size, and apply it to the slideol * the current slide
 				newW = $slideWrapper.width();
 				$slideol.css({'left': 0 });
@@ -68,5 +68,5 @@
 				break;
 			}
 		});
-	}//end plugin fn
+	};//end plugin fn
 }(jQuery));
