@@ -3,10 +3,27 @@ cbslider
 
 Fully-Responsive, Looping Slider
 
+Requires jQuery and TweenMax
+
+```html
+<!--CDN link to latest jquery -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!--CDN link for the latest TweenMax-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"/></script>
+<!-- Require cbslider.js -->
+<script src="js.cbslider.js"></script>
+```
+
 Initalize cbslider on the document 
 
 ```javascript
-$(document).cbslider();
+$(document).ready(function(){
+
+	$(document).cbslider();	
+
+});
+
 ```
 Basic HTML Markup 
 
