@@ -1,7 +1,7 @@
 cbslider
 ========
 
-Fully-Responsive, Looping Slider
+is a fully-responsive, customizable, looping slideshow
 
 Requires <strong>jQuery</strong> and <strong>TweenMax</strong>
 
