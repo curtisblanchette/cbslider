@@ -67,3 +67,15 @@ Basic HTML Markup (minimum of 3 slides)
 
 
 <h1>Options</h1>
+<p>cbslider comes with userfriendly API</p>
+```javascript 
+$(document).ready(function(){
+
+	$(document).cbslider({
+		speed: 2,
+		bgcolor: 'lightblue',
+		aniamtion: 'slide'
+	});
+
+});
+```
