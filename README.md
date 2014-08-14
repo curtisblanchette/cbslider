@@ -66,8 +66,8 @@ Basic HTML Markup (minimum of 3 slides)
 ```
 
 
-<h1>Options</h1>
-<p>cbslider API options</p>
+<h1>API Options</h1>
+
 ```javascript 
 $(document).ready(function(){
 
