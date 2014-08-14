@@ -38,7 +38,7 @@ Basic HTML Markup
 	<a id="prevSlide">Prev</a>
 </div>
 ```
-Less
+Include this Less CSS to style the Slider
 
 ```less 
 	#slideWrapper {
