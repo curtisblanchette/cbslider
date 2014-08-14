@@ -3,9 +3,14 @@ cbslider
 
 Fully-Responsive, Looping Slider
 
+Initalize cbslider on the document 
 
+```javascript
+$(document).cbslider();
+```
 Basic HTML Markup 
 
+```html
 <div id="slideWrapper">
 	<section id="slideshow">
 		<ol>
@@ -32,3 +37,4 @@ Basic HTML Markup
 	<a id="nextSlide">Next</a>
 	<a id="prevSlide">Prev</a>
 </div>
+```
