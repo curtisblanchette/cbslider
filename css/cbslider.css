@@ -34,6 +34,8 @@
 }
 #slideWrapper #slideshow ol li article {
   width: 50%;
+  height: 100%;
+  margin: auto;
 }
 #slideWrapper #prevSlide,
 #slideWrapper #nextSlide {
