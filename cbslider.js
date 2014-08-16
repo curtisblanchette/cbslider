@@ -1,9 +1,9 @@
 (function($){
 	$.fn.cbslider = function(options) {
 
-		//establish default settings
+		//establish our default settings
 		var settings = $.extend({
-			speed		: 1, //
+			speed		: 5, //
 			bgcolor     : '',
 			animation   : 'slide'  
 		}, options);
@@ -13,7 +13,17 @@
 			$slideol 	  = $('#slideshow ol'),
 			$slideli 	  = $('#slideshow ol li'),
 			slidelength   = $slideshow.find('ol > li').length;
+		
+		
+		//init Hammer
+		$('#slideshow').hammer({threshold:100}).bind("swipeleft", animateNext);
+		$('#slideshow').hammer({threshold:100}).bind("swiperight", animatePrev);
 
+
+		// Store the slide elememts
+
+		var $article = $('#slideshow ol li article'),
+			$feature = $('#slideshow ol li feature');
 
 			$slideWrapper.css({background: settings.bgcolor});
 
@@ -23,34 +33,39 @@
 			// set the slide width to be a division of 100 percent
 			$slideli.css('width', (100 / slidelength) + '%');
 
+			// set slide position to slide 2 (default position)
+			$slideol.css('left', -$slideli.width());
+
 			// Fix the Resize Slideshow Issue
 			///////////////////////////////////////
 			var newW = $slideWrapper.width();
 
-			$(window).on('resize', function(){
-				//store the new window size, and apply it to the slideol * the current slide
+			$(window).on('resize', function(e){
+				//store the new window size, and 
 				newW = $slideWrapper.width();
-				$slideol.css({'left': 0 });
+				$slideol.css({'left': -newW });
 			});
 
 			function animateNext() {
 				var tl = new TimelineMax();
-					tl.to($slideol, options.speed, {left: -newW, onComplete:cloneFirst });
+					tl.to($slideol, options.speed, {left: -newW*2, onComplete:cloneFirst})
 			}
 			function cloneFirst() {
 				$slideol.find('li:first').clone().appendTo($slideol);
 				$slideol.find('li:first').remove();
-				$slideol.css('left', 0);
+				$slideol.css('left', -newW);
 			}
 
-			function animatePrev() {
+			function cloneLast() {
 				$slideol.find('li:last').clone().prependTo($slideol);
 				$slideol.find('li:last').remove();
 				$slideol.css('left', -newW);
+			}
 
+			function animatePrev() {
 
 				var tl = new TimelineMax();
-					tl.to($slideol, options.speed, {left: 0});
+					tl.to($slideol, options.speed, {left: 0, onComplete:cloneLast })
 
 			}
 			
@@ -58,15 +73,23 @@
 		$slideWrapper.on('click', 'a', function(e){
 			var $this  = e.target;
 
-			switch ($this.id) {
-				case 'prevSlide':
-					animatePrev();
-				break;
+			  if ($slideol.is(':animated'))
+			  {
+			      return false;
+			  } else {
 
-				case 'nextSlide':
-					animateNext();
-				break;
+				switch ($this.id) {
+					case 'prevSlide':
+						animatePrev();
+					break;
+
+					case 'nextSlide':
+						animateNext();
+					break;
+				}
 			}
 		});
-	};//end plugin fn
+
+
+	}//end plugin fn
 }(jQuery));
