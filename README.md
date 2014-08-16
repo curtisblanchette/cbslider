@@ -1,4 +1,4 @@
-cbSlider 
+cbslider.js
 ========
 <h5>jQuery Responsive Looping SlideShow Plugin</h5>
 
