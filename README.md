@@ -74,7 +74,8 @@ $(document).ready(function(){
 	$(document).cbslider({
 		speed: 2,
 		bgcolor: 'lightblue',
-		animation: 'slide'
+		animation: 'slide',
+        easing: 'Circ.easeInOut' // Use any of the TweenMax Easing Properties
 	});
 
 });

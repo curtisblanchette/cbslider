@@ -3,9 +3,10 @@
 
 		//establish our default settings
 		var settings = $.extend({
-			speed		: 5, //
+			speed		: 0.5, //
 			bgcolor     : '',
-			animation   : 'slide'  
+			animation   : 'slide' ,
+			easing 		: '' 	
 		}, options);
 
 		var $slideWrapper = $('#slideWrapper'),
@@ -48,7 +49,7 @@
 
 			function animateNext() {
 				var tl = new TimelineMax();
-					tl.to($slideol, options.speed, {left: -newW*2, onComplete:cloneFirst})
+					tl.to($slideol, options.speed, {left: -newW*2, ease:options.easing, onComplete:cloneFirst})
 			}
 			function cloneFirst() {
 				$slideol.find('li:first').clone().appendTo($slideol);
@@ -65,7 +66,7 @@
 			function animatePrev() {
 
 				var tl = new TimelineMax();
-					tl.to($slideol, options.speed, {left: 0, onComplete:cloneLast })
+					tl.to($slideol, options.speed, {left: 0, ease:options.easing, onComplete:cloneLast })
 
 			}
 			
