@@ -3,10 +3,9 @@
 
 		//establish our default settings
 		var settings = $.extend({
-			speed		: 0.5, //
+			speed		: 5, //
 			bgcolor     : '',
-			animation   : 'slide' ,
-			easing 		: '' 	
+			animation   : 'slide'  
 		}, options);
 
 		var $slideWrapper = $('#slideWrapper'),
@@ -22,25 +21,27 @@
 
 
 		// Store the slide elememts
-
 		var $article = $('#slideshow ol li article'),
 			$feature = $('#slideshow ol li feature');
 
+			// set the background color
 			$slideWrapper.css({background: settings.bgcolor});
 
-		    // Determines how many slides are in the set and adjusts li widths accordingly
-			// set the container width to be the # of slides * 100
+			// set the container width to be  100% * slidelength
 			$slideol.css('width', slidelength * 100 + '%'); 
+
 			// set the slide width to be a division of 100 percent
 			$slideli.css('width', (100 / slidelength) + '%');
 
 			// set slide position to slide 2 (default position)
 			$slideol.css('left', -$slideli.width());
 
+			//now that we are at slide 2, cloneLast to get us back to slide 1
+			cloneLast();
+
 			// Fix the Resize Slideshow Issue
 			///////////////////////////////////////
 			var newW = $slideWrapper.width();
-
 			$(window).on('resize', function(e){
 				//store the new window size, and 
 				newW = $slideWrapper.width();
@@ -49,7 +50,7 @@
 
 			function animateNext() {
 				var tl = new TimelineMax();
-					tl.to($slideol, options.speed, {left: -newW*2, ease:options.easing, onComplete:cloneFirst})
+					tl.to($slideol, options.speed, {left: -newW*2, onComplete:cloneFirst})
 			}
 			function cloneFirst() {
 				$slideol.find('li:first').clone().appendTo($slideol);
@@ -66,7 +67,7 @@
 			function animatePrev() {
 
 				var tl = new TimelineMax();
-					tl.to($slideol, options.speed, {left: 0, ease:options.easing, onComplete:cloneLast })
+					tl.to($slideol, options.speed, {left: 0, onComplete:cloneLast })
 
 			}
 			

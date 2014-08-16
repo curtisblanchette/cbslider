@@ -3,12 +3,16 @@ cbslider.js
 <h5>jQuery Responsive, Touch-Ready, Looping SlideShow Plugin</h5>
 
 
-Requires <strong>jQuery</strong> and <strong>TweenMax</strong>
+Requires <strong>jQuery</strong> and <strong>TweenMax</strong> and <strong>Hammer JS</strong>
 
 ```html
 <script src="jquery-1.11.1.js"></script>
 <!--CDN link for the latest TweenMax-->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"/></script>
+<!-- Hammer JS -->
+<script src="hammer.min.js"></script>
+<script src="jquery.hammer.js"></script>
+<script src="hammer.min.map"></script>
 <!-- link to cbslider css -->
 <link href="css/cbslider.css" rel="stylesheet">
 <!-- Include cbslider.js -->
@@ -19,8 +23,8 @@ Initalize cbslider on the slideshow
 
 ```javascript
 $(document).ready(function(){
-
-	$('#slideshow').cbslider();	
+	
+    $('#slideshow').cbslider();	
 
 });
 
