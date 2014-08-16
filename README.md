@@ -1,6 +1,6 @@
 cbslider.js
 ========
-<h5>jQuery Responsive Looping SlideShow Plugin</h5>
+<h5>jQuery Responsive, Touch-Ready, Looping SlideShow Plugin</h5>
 
 
 Requires <strong>jQuery</strong> and <strong>TweenMax</strong>
