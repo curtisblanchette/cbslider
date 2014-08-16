@@ -15,12 +15,12 @@ Requires <strong>jQuery</strong> and <strong>TweenMax</strong>
 <script src="cbslider.js"></script>
 ```
 
-Initalize cbslider on the document 
+Initalize cbslider on the slideshow
 
 ```javascript
 $(document).ready(function(){
 
-	$(document).cbslider();	
+	$('#slideshow').cbslider();	
 
 });
 
