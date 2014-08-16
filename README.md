@@ -75,7 +75,7 @@ $(document).ready(function(){
 		speed: 2,
 		bgcolor: 'lightblue',
 		animation: 'slide',
-        easing: 'Circ.easeInOut' // Use any of the TweenMax Easing Properties
+        easing: 'Circ.easeInOut' // Use any of the TweenMax Easing Propertie
 	});
 
 });
