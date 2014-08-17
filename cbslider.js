@@ -1,12 +1,12 @@
 (function($){
 	$.fn.cbslider = function(options) {
 
-		//establish our default settings
+		// establish our default settings
 		var settings = $.extend({
 			speed		: 5, 
 			bgcolor     : '',
-			autoplay    : true,
-			interval    : 3000,
+			autoplay    : 'true',
+			interval    : 3,
 			animation   : 'slide' 
 		}, options);
 
@@ -17,7 +17,7 @@
 			slidelength   = $slideshow.find('ol > li').length;
 		
 		
-		//init Hammer
+		// init Hammer
 		$('#slideshow').hammer({threshold:100}).bind("swipeleft", animateNext);
 		$('#slideshow').hammer({threshold:100}).bind("swiperight", animatePrev);
 
@@ -50,14 +50,30 @@
 				$slideol.css({'left': -newW });
 			});
 
+			
+			// Autoplay Feature
+			//////////////////////////////////////////////
+			var cycle;
 			if(options.autoplay) {
 				// init auto play
-				var cycle = setInterval(function() {
+				cycle = setInterval(function() {
 					animateNext();
 				}, options.interval);
 			}
+			// on mouseover disable autoplay
+			$slideWrapper.on('mouseover', function(){
+				clearInterval(cycle);
+			});
+			$slideWrapper.on('mouseout', function(){
+				if(options.autoplay){
+					cycle = setInterval(function() {
+						animateNext();
+					}, options.interval);
+				}
+			});
 
-
+			// Animators and Cloners
+			/////////////////////////////////////////////////////
 			function animateNext() {
 				var tl = new TimelineMax();
 					tl.to($slideol, options.speed, {left: -newW*2, onComplete:cloneFirst})
@@ -101,6 +117,7 @@
 				}
 			}
 		});
+
 
 
 	}//end plugin fn
