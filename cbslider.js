@@ -3,9 +3,11 @@
 
 		//establish our default settings
 		var settings = $.extend({
-			speed		: 5, //
+			speed		: 5, 
 			bgcolor     : '',
-			animation   : 'slide'  
+			autoplay    : 'true',
+			interval    : 3,
+			animation   : 'slide' 
 		}, options);
 
 		var $slideWrapper = $('#slideWrapper'),
@@ -47,6 +49,14 @@
 				newW = $slideWrapper.width();
 				$slideol.css({'left': -newW });
 			});
+
+			if(options.autoplay) {
+				// init auto play
+				var cycle = setInterval(function() {
+					animateNext();
+				}, options.interval);
+			}
+
 
 			function animateNext() {
 				var tl = new TimelineMax();
