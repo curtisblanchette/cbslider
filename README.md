@@ -76,10 +76,12 @@ Basic HTML Markup (minimum of 3 slides)
 $(document).ready(function(){
 
 	$(document).cbslider({
-		speed: 0.5,
-		bgcolor: 'lightblue',
-		animation: 'slide',
-        easing: 'Circ.easeInOut' // Use any of the TweenMax Easing Properties
+		speed       : 0.5,
+		bgcolor     : 'lightblue',
+		animation   : 'slide',
+        easing      : 'Circ.easeInOut' // Use any of the TweenMax Easing Properties,
+        autoplay    : true,
+        interval    : 5000
 	});
 
 });
