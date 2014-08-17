@@ -2,47 +2,65 @@
     position:relative;
     margin:0 auto;
     max-width:1440px;
-
+    
 
     #slideshow {
         margin:0;
         min-width:100%;
-        max-height:400px;
-
-
         position:relative;
         z-index:99999;
         overflow:hidden;
 
         ol {
-            padding:0;
             margin:0;
             min-width:300%;
+            height:100%;
             position:relative;
 
             li {
                 margin:0;
                 float:left;
                 width:33%;
-                max-height:400px;
                 display:flex;
+                position:relative;
+            
 
                 feature {
+                    height:100%;
                     width:50%;
                     text-align:center;
+                    transition:.5s;
 
                     img {
-                        width: 50%;
+                        width:60%;
                         margin:0 auto;
+                        
                     }
                 }
                 article {
                     width:50%;
                     height:100%;
                     margin:auto;
+                    margin-left:20px;
+                    padding-right:3em;
+                    transition:all .5s ease-in-out;
 
-                    h2, p {
-
+                    h2 {
+                        margin-bottom:.25em;
+                        float:left;
+                        width:100%;
+                    }
+                    h2{
+                        float:left;
+                        width:100%;
+                    }
+                    p {
+                        display:inline;
+                        float:left;
+                        width:100%;
+                        font-size:1.3em;
+                        font-weight:200;
+                        max-width:560px;
                     }
 
                 }
@@ -52,13 +70,108 @@
     #prevSlide, #nextSlide  {
         position:absolute;
         top:50%;
-        transform:translateY(-50%);
+        transform:translatey(-50%);
         z-index:99999;
         margin:0;
-        color:#666;
+        border:1px solid rgba(0,0,0,.15);
+        background:white;
     }
-
+    #prevSlide:hover , #nextSlide:hover {
+        background:rgba(0,0,0,.15);
+        color:white;
+    }
     #prevSlide { left:0; }
     #nextSlide { right:0; }
+    
+}
+#slideWrapper:hover {
+    feature {
+        transform:scale(1.1);
+    } 
+    article {
+        transform:translateX(-20px);
 
+    }
+    
+}
+@media (max-width: 960px) {
+    #slideWrapper {
+        #slideshow {
+            ol {
+
+                li {
+
+                    article {
+                        h2 {
+                            font-size:1.8em;
+                        }
+                        p {
+                            font-size:1em;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+@media (max-width: 768px) {
+    #slideWrapper {
+        #slideshow {
+            ol {
+
+                li {
+                    display:block;
+
+                    article {
+                        position:absolute;
+                        top:0;
+                        left:50%;
+                        width:100%;
+                        transform:translateX(-50%);
+                        text-align:center;
+                        margin-left:0;
+                        margin: 0;
+                        padding-right:0;
+                        h2{
+                            font-size:1em;
+                            position:absolute;
+                            left:50%;
+                            transform:translateX(-50%);
+                            top:20px;
+                            width:60%;
+                            
+                        }
+                        h5 {
+                            font-size:1em;
+                            display:none;
+                        }
+                        p {
+                            display:none;
+                        }
+                        a {
+                            position:absolute;
+                            width:60%;
+                            bottom:20px;
+                            margin-bottom:0;
+                            left:50%;
+                            transform:translateX(-50%);
+                            background:rgba(0,0,0,.15);
+                            color:white;
+                            align-self:flex-end;
+                        }
+                    }
+                    feature {
+                        width:100%;
+                        float:left;
+                        img{
+                            width:50%;
+                            margin: 10% 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
 }
