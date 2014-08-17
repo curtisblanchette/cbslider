@@ -5,8 +5,8 @@
 		var settings = $.extend({
 			speed		: 5, 
 			bgcolor     : '',
-			autoplay    : 'true',
-			interval    : 3,
+			autoplay    : true,
+			interval    : 3000,
 			animation   : 'slide' 
 		}, options);
 
