@@ -5,6 +5,8 @@ cbslider.js
 
 Requires <strong>jQuery</strong> and <strong>TweenMax</strong> and <strong>Hammer JS</strong>
 
+<a href="https://rawgit.com/curtisblanchette/cbslider.js/master/example.html">Check out the demo</a>
+
 ```html
 <script src="jquery-1.11.1.js"></script>
 <!--CDN link for the latest TweenMax-->
