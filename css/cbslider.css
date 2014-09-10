@@ -13,7 +13,7 @@
 #slideWrapper #slideshow ol {
   margin: 0;
   min-width: 300%;
-  height: 100%;
+  height: auto;
   position: relative;
 }
 #slideWrapper #slideshow ol li {
@@ -24,7 +24,7 @@
   position: relative;
 }
 #slideWrapper #slideshow ol li feature {
-  height: 100%;
+  height: auto;
   width: 50%;
   text-align: center;
   transition: .5s;
@@ -35,7 +35,7 @@
 }
 #slideWrapper #slideshow ol li article {
   width: 50%;
-  height: 100%;
+  height: auto;
   margin: auto;
   margin-left: 20px;
   padding-right: 3em;
