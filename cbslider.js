@@ -75,26 +75,32 @@
 			// Animators and Cloners
 			/////////////////////////////////////////////////////
 			function animateNext() {
-				var tl = new TimelineMax();
-					tl.to($slideol, options.speed, {left: -newW*2, onComplete:cloneFirst})
+				$slideol.addClass('slide-ani');
+				$slideol.css({left: -newW*2});
+				var wait = setTimeout(function(){
+					cloneFirst();
+				}, 250);
 			}
 			function cloneFirst() {
+				$slideol.removeClass('slide-ani');
 				$slideol.find('li:first').clone().appendTo($slideol);
 				$slideol.find('li:first').remove();
 				$slideol.css('left', -newW);
 			}
 
 			function cloneLast() {
+				$slideol.removeClass('slide-ani');
 				$slideol.find('li:last').clone().prependTo($slideol);
 				$slideol.find('li:last').remove();
 				$slideol.css('left', -newW);
 			}
 
 			function animatePrev() {
-
-				var tl = new TimelineMax();
-					tl.to($slideol, options.speed, {left: 0, onComplete:cloneLast })
-
+				$slideol.addClass('slide-ani');
+				$slideol.css({left: 0});
+				var wait = setTimeout(function(){
+					cloneLast();
+				}, 250);
 			}
 			
 
