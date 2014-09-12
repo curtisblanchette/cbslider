@@ -58,6 +58,9 @@
   font-weight: 200;
   max-width: 560px;
 }
+#slideWrapper #slideshow .slide-ani {
+  transition: 0.25s ease-in-out;
+}
 #slideWrapper #prevSlide,
 #slideWrapper #nextSlide {
   position: absolute;
