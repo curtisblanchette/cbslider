@@ -3,7 +3,7 @@ cbslider.js
 <h5>jQuery Responsive, Touch-Ready, Looping SlideShow Plugin</h5>
 
 
-Requires <strong>jQuery</strong> and <strong>TweenMax</strong> and <strong>Hammer JS</strong>
+Requires <strong>jQuery</strong> and <strong>Hammer JS</strong>
 
 <a href="http://webdesignstudio.ca/github/cbslider/example.html">Check out the demo</a>
 
