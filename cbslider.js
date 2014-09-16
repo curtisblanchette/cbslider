@@ -20,7 +20,8 @@
 			slidelength   = $slideshow.find('ol > li').length;
 
 		var posX = $slideWrapper.width(); // default position
-		
+		$slideol.attr('id', 'hammer-el'); // give the ol the 'hammer-el' selector
+
 		// Hammer Time
 		var el = document.getElementById('hammer-el'),
 		    wrapper = document.getElementById('slideshow'),
@@ -39,6 +40,7 @@
 		$slideol.css('left', -$slideli.width()); // set slide position to slide 2 (default position)
 		$slideol.find('li:last').prependTo($slideol); // now that we are at slide 2, prepend the last slide to get us back to slide 1
 		$slideol.css('left', -posX); // get back to slide 2 (aka slide 1)
+
 
 		// Resize Slideshow Resolution
 		$(window).on('resize', function(){
