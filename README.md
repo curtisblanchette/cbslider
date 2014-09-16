@@ -10,9 +10,7 @@ Requires <strong>jQuery</strong> and <strong>Hammer JS</strong>
 ```html
 <script src="jquery-1.11.1.js"></script>
 <!-- Hammer JS -->
-<script src="hammer.min.js"></script>
-<script src="jquery.hammer.js"></script>
-<script src="hammer.min.map"></script>
+<script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
 <!-- link cbslider css -->
 <link href="css/cbslider.css" rel="stylesheet">
 <!-- Include cbslider.js -->
