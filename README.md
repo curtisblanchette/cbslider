@@ -16,8 +16,8 @@ Requires <strong>jQuery</strong> and <strong>Hammer JS</strong>
 <!-- Include cbslider.js -->
 <script src="cbslider.js"></script>
 ```
-```
-Basic HTML Markup (minimum of 3 slides)
+
+<h3>Basic HTML Markup (minimum of 3 slides)</h3>
 
 ```html
 <div id="slideWrapper">
@@ -56,11 +56,14 @@ Basic HTML Markup (minimum of 3 slides)
     <a id="prevSlide">Prev</a>
 </div>
 ```
-Initialize cbslider on the slideshow
+
+<h3>Initialize cbslider on the slideshow</h3>
+
 ```javascript
    $('#slideshow').cbslider();	
 ```
-<h1>API Options</h1>
+<h3>API Options</h3>
+
 ```javascript 
 $(document).ready(function(){
 
