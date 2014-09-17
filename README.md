@@ -8,12 +8,13 @@ Requires <strong>jQuery</strong> and <strong>Hammer JS</strong>
 <a href="http://webdesignstudio.ca/github/cbslider/example.html">Check out the demo</a>
 
 ```html
-<script src="jquery-1.11.1.js"></script>
-<!-- Hammer JS -->
+<!-- jQuery 1.11.1 -->
+<script src="dist/jquery-1.11.1.js"></script>
+<!-- Hammer CDN -->
 <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
-<!-- link cbslider css -->
-<link href="css/cbslider.css" rel="stylesheet">
-<!-- Include cbslider.js -->
+<!--link to cbslider css -->
+<link href="cbslider.css" rel="stylesheet">
+<!-- Require cbslider.js -->
 <script src="cbslider.js"></script>
 ```
 
@@ -67,8 +68,9 @@ Requires <strong>jQuery</strong> and <strong>Hammer JS</strong>
 ```javascript 
 	$('#slideshow').cbslider({
 		speed       : 0.5,
-		bgcolor     : 'lightblue',
-	        autoplay    : true,
-	        interval    : 5000
+	    autoplay    : true,
+	    interval    : 5000
 	});
 ```
+<h4>Documentation</h4>
+<p>If you run into any issues with the slide positions on a window resize, you can invoke ```javascript fixWidth(); ``` which is returned by the plugin as an object.</p>
