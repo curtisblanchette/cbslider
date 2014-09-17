@@ -19,7 +19,6 @@
 			$feature      = $('#slideshow ol li feature'),
 			$imgs 		  = $slideol.find('img'),
 			slidelength   = $slideshow.find('ol > li').length;
-
 		
 		$slideol.attr('id', 'hammer-el'); // give the ol the 'hammer-el' selector
 
@@ -42,21 +41,15 @@
 			$slideol.css('left', -$slideli.width()); // set slide position to slide 2 (default position)
 			$slideol.find('li:last').prependTo($slideol); // now that we are at slide 2, prepend the last slide to get us back to slide 1
 			$slideol.css('left', -posX); // get back to slide 2 (aka slide 1)
-
 			// disable dragging of all images
 			for(var i=0; i< $imgs.length; i++) {
-					$imgs[i].ondragstart = function(event) { return false; event.draggable = false; }
-		        	$imgs[i].ondragenter = function(event) { event.dataTransfer.dropEffect='none'; event.stopPropagation(); event.preventDefault(); }  
-		        	$imgs[i].ondragover = function(event) { event.dataTransfer.dropEffect='none'; event.stopPropagation(); event.preventDefault(); }  
-		        	$imgs[i].ondrop = function(event) { event.dataTransfer.dropEffect='none'; event.stopPropagation(); event.preventDefault(); }
+				$imgs[i].ondragstart = function(event) { return false; event.draggable = false; }
+	        	$imgs[i].ondragenter = function(event) { event.dataTransfer.dropEffect='none'; event.stopPropagation(); event.preventDefault(); }  
+	        	$imgs[i].ondragover = function(event) { event.dataTransfer.dropEffect='none'; event.stopPropagation(); event.preventDefault(); }  
+	        	$imgs[i].ondrop = function(event) { event.dataTransfer.dropEffect='none'; event.stopPropagation(); event.preventDefault(); }
 			}
-
 		};
 		init();
-
-
-
-
 
 		// Resize Slideshow Resolution
 		$(window).on('resize', function() {
