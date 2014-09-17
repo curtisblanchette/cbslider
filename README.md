@@ -65,14 +65,10 @@ Requires <strong>jQuery</strong> and <strong>Hammer JS</strong>
 <h3>API Options</h3>
 
 ```javascript 
-$(document).ready(function(){
-
-	$(document).cbslider({
+	$('#slideshow').cbslider({
 		speed       : 0.5,
 		bgcolor     : 'lightblue',
-        autoplay    : true,
-        interval    : 5000
+	        autoplay    : true,
+	        interval    : 5000
 	});
-
-});
 ```
