@@ -17,6 +17,7 @@
 			$slideli 	  = $('#slideshow ol li'),
 			$article      = $('#slideshow ol li article'),
 			$feature      = $('#slideshow ol li feature'),
+			$imgs 		  = $slideol.find('img'),
 			slidelength   = $slideshow.find('ol > li').length;
 
 		
@@ -35,16 +36,27 @@
 
 		var init = function() {
 			// init Slider 
-			$feature.find('img').mousedown(function(){return false}); // stop image dragging
 			$slideWrapper.css({background: settings.bgcolor}); // set the background color
 			$slideol.css('width', slidelength * 100 + '%'); // set the container width to be  100% * slidelength
 			$slideli.css('width', (100 / slidelength) + '%'); // set the slide width to be a division of 100 percent
 			$slideol.css('left', -$slideli.width()); // set slide position to slide 2 (default position)
 			$slideol.find('li:last').prependTo($slideol); // now that we are at slide 2, prepend the last slide to get us back to slide 1
 			$slideol.css('left', -posX); // get back to slide 2 (aka slide 1)
-		};
 
+			// disable dragging of all images
+			for(var i=0; i< $imgs.length; i++) {
+					$imgs[i].ondragstart = function(event) { return false; event.draggable = false; }
+		        	$imgs[i].ondragenter = function(event) { event.dataTransfer.dropEffect='none'; event.stopPropagation(); event.preventDefault(); }  
+		        	$imgs[i].ondragover = function(event) { event.dataTransfer.dropEffect='none'; event.stopPropagation(); event.preventDefault(); }  
+		        	$imgs[i].ondrop = function(event) { event.dataTransfer.dropEffect='none'; event.stopPropagation(); event.preventDefault(); }
+			}
+
+		};
 		init();
+
+
+
+
 
 		// Resize Slideshow Resolution
 		$(window).on('resize', function() {
