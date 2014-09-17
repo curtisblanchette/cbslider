@@ -16,16 +16,6 @@ Requires <strong>jQuery</strong> and <strong>Hammer JS</strong>
 <!-- Include cbslider.js -->
 <script src="cbslider.js"></script>
 ```
-
-Initalize cbslider on the slideshow
-
-```javascript
-$(document).ready(function(){
-	
-    $('#slideshow').cbslider();	
-
-});
-
 ```
 Basic HTML Markup (minimum of 3 slides)
 
@@ -66,18 +56,17 @@ Basic HTML Markup (minimum of 3 slides)
     <a id="prevSlide">Prev</a>
 </div>
 ```
-
-
+Initialize cbslider on the slideshow
+```javascript
+   $('#slideshow').cbslider();	
+```
 <h1>API Options</h1>
-
 ```javascript 
 $(document).ready(function(){
 
 	$(document).cbslider({
 		speed       : 0.5,
 		bgcolor     : 'lightblue',
-		animation   : 'slide',
-        easing      : 'Circ.easeInOut' // Use any of the TweenMax Easing Properties,
         autoplay    : true,
         interval    : 5000
 	});
