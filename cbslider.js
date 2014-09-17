@@ -19,7 +19,7 @@
 			$feature      = $('#slideshow ol li feature'),
 			$imgs 		  = $slideol.find('img'),
 			slidelength   = $slideshow.find('ol > li').length;
-		
+	
 		$slideol.attr('id', 'hammer-el'); // give the ol the 'hammer-el' selector
 
 		// Hammer Time
