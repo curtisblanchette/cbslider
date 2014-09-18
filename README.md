@@ -5,7 +5,7 @@ cbslider.js
 
 Requires <strong>jQuery</strong> and <strong>Hammer JS</strong>
 
-<a href="http://webdesignstudio.ca/github/cbslider/example.html" target="_blank">Check out the demo</a>
+<a href="http://blanchettedesigns.com/github/cbslider/example.html" target="_blank">Check out the demo</a>
 
 ```html
 <!-- jQuery 1.11.1 -->
